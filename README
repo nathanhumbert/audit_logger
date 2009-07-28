@@ -1,0 +1,18 @@
+AuditLogger
+===========
+
+AuditLogger is a plugin that is intended to make audit logging of ActiveResource objects easy. 
+The main goals of audit logger are:
+
+* Setup should be super easy
+* The database structure should be limited to helping access data
+* Changing the attributes of the model does not affect the plugin
+* Easy to implement data retention plan
+
+Example
+=======
+
+
+
+
+Copyright (c) 2009 Nathan Humbert, released under the MIT license
