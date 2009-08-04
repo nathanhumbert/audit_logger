@@ -13,11 +13,11 @@ ActiveRecord::Schema.define(:version => 0) do
   end
 
   create_table :audit_log_entries, :force => true do |t|
-    t.text :audited_object
-    t.text :changes
+    t.text :object_attributes
+    t.text :object_changes
     t.text :operation
-    t.text :object_class
-    t.integer :object_id
+    t.text :audited_object_type
+    t.integer :audited_object_id
 
     t.timestamps
   end
