@@ -1,7 +1,7 @@
 AuditLogger
 ===========
 
-AuditLogger is a plugin that is intended to make audit logging of ActiveResource objects easy. 
+AuditLogger is a plugin that is intended to make lifecycle logging of ActiveResource objects easy. 
 The main goals of audit logger are:
 
 * Setup should be super easy
@@ -12,7 +12,14 @@ The main goals of audit logger are:
 Example
 =======
 
+$ script/generate audit_loggger AuditLogEntry
+$ rake db:migrate
 
+Then add the following line to any model you want to have logged
+
+ uses_audit_logger("AuditLogEntry")
+
+Restart your app and any changes to an object from that model will be logged.
 
 
 Copyright (c) 2009 Nathan Humbert, released under the MIT license
