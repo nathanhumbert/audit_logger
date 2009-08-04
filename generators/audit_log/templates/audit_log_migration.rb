@@ -1,6 +1,6 @@
 class <%= class_name %> < ActiveRecord::Migration
   def self.up
-    create_table <%= table_name.to_sym %> do |t|
+    create_table :<%= table_name.to_sym %> do |t|
       t.text :object_attributes
       t.text :object_changes
       t.text :operation
@@ -12,6 +12,6 @@ class <%= class_name %> < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table <%= table_name.to_sym %>
+    drop_table :<%= table_name%>
   end
 end
