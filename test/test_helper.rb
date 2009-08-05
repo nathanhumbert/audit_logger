@@ -22,7 +22,7 @@ def run_generator
   FileUtils.mkdir_p(fake_rails_root)
   FileUtils.mkdir_p(File.join(fake_rails_root, "app", "models"))
   silence_generator do
-    Rails::Generator::Scripts::Generate.new.run(["audit_log", "AuditLogEntry"], :destination => fake_rails_root)
+    Rails::Generator::Scripts::Generate.new.run(["audit_log", "AuditLogClassNoOneWillEverUseEntry"], :destination => fake_rails_root)
   end
 end
 
@@ -46,7 +46,7 @@ def fake_rails_root
 end
 
 def model_file
-  File.join(fake_rails_root, 'app', 'models', "audit_log_entry.rb") 
+  File.join(fake_rails_root, 'app', 'models', "audit_log_class_no_one_will_ever_use_entry.rb") 
 end
 
 def migration_file_list

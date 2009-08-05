@@ -12,7 +12,7 @@ ActiveRecord::Schema.define(:version => 0) do
     t.timestamps
   end
 
-  create_table :audit_log_entries, :force => true do |t|
+  create_table :audit_log_class_no_one_will_ever_use_entries, :force => true do |t|
     t.text :object_attributes
     t.text :object_changes
     t.text :operation
